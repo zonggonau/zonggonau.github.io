@@ -431,56 +431,24 @@
       }
 
       function App() {
-        fetch("https://zonggonau.github.io/data.json")
-          .then((response) => response.json())
-          .then((data) => {
-            console.log(data);
-          });
+        const [data, setData] = React.useState([
+          {
+            url: "",
+            desc: "",
+            data: [
+              {
+                desc: "",
+                url: "",
+              },
+            ],
+          },
+        ]);
 
-        const iconDev = [
-          {
-            url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHcW-wcqFhHpxYJcGeCNmdqMJ6SoI4hKjNMkVaLL8c&s",
-            desc: "ReactJS",
-            data: [
-              {
-                desc: "Sistem Informasi Surat Menyurat (TTE) e-Surat",
-                url: "https://google.com/",
-              },
-              {
-                desc: "Sistem Informasi Surat Menyurat (TTE) e-Surat",
-                url: "https://tte.adisudj.ac.id/",
-              },
-              {
-                desc: "Sistem Informasi Surat Menyurat (TTE) e-Surat",
-                url: "https://tte.adisudj.ac.id/",
-              },
-            ],
-          },
-          {
-            url: "https://iconape.com/wp-content/files/bx/33981/svg/blackfire-inverted-1.svg",
-            desc: "Codeigniter",
-            data: [
-              {
-                desc: "Sistem Informasi Surat Menyurat (TTE) e-Surat",
-                url: "https://google.com/",
-              },
-              {
-                desc: "Sistem Informasi Surat Menyurat (TTE) e-Surat",
-                url: "https://tte.adisudj.ac.id/",
-              },
-            ],
-          },
-          {
-            url: "https://icons-for-free.com/download-icon-icon++html+icon-1320194800994962643_512.png",
-            desc: "HTML",
-            data: [
-              {
-                desc: "Sistem Informasi Surat Menyurat (TTE) e-Surat",
-                url: "https://google.com/",
-              },
-            ],
-          },
-        ];
+        React.useEffect(() => {
+          fetch("https://zonggonau.github.io/data.json")
+            .then((response) => response.json())
+            .then((data) => setData(data));
+        }, []);
 
         return (
           <div class="w3-container w3-card w3-white">
@@ -489,8 +457,9 @@
               Documentation / Library
             </h2>
             <div class="w3-row">
-              {iconDev.map((item, index) => (
+              {data.map((item, index) => (
                 <Documentation
+                  key
                   url={item.url}
                   desc={item.desc}
                   data={item.data}
