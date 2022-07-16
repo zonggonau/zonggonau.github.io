@@ -4,50 +4,34 @@
     "desc": "ReactJSs",
     "data": [
       {
-        "desc": "Sistem Informasi Surat Menyurat (TTE) e-Surat",
-        "url": "https://google.com/"
+        "desc": "React Navigation Routing and navigation",
+        "url": "https://reactnavigation.org/"
       },
       {
-        "desc": "Sistem Informasi Surat Menyurat (TTE) e-Surat",
-        "url": "https://tte.adisudj.ac.id/"
+        "desc": "React Native Firebase",
+        "url": "https://rnfirebase.io/"
       },
       {
-        "desc": "Sistem Informasi Surat Menyurat (TTE) e-Surat",
-        "url": "https://tte.adisudj.ac.id/"
+        "desc": "React JS",
+        "url": "https://reactjs.org/"
       }
     ]
   },
   {
     "url": "https://iconape.com/wp-content/files/bx/33981/svg/blackfire-inverted-1.svg",
-    "desc": "Codeigniters",
+    "desc": "PHP",
     "data": [
       {
-        "desc": "Sistem Informasi Surat Menyurat (TTE) e-Surat",
-        "url": "https://google.com/"
+        "desc": "Codeigniter 4 - MythAuth  - AdminLTE",
+        "url": "https://github.com/zonggonau/CI4-MythAuth-AdminLTE"
       },
       {
-        "desc": "Sistem Informasi Surat Menyurat (TTE) e-Surat",
-        "url": "https://tte.adisudj.ac.id/"
+        "desc": "Codeigniter4 Documentation",
+        "url": "https://www.codeigniter.com/userguide3/"
       }
-    ]
-  },
-  {
-    "url": "https://icons-for-free.com/download-icon-icon++html+icon-1320194800994962643_512.png",
-    "desc": "HTMLs",
-    "data": [
       {
-        "desc": "Sistem Informasi Surat Menyurat (TTE) e-Surat",
-        "url": "https://google.com/"
-      }
-    ]
-  },
-  {
-    "url": "https://icons-for-free.com/download-icon-icon++html+icon-1320194800994962643_512.png",
-    "desc": "HTML",
-    "data": [
-      {
-        "desc": "Sistem Informasi Surat Menyurat (TTE) e-Surat",
-        "url": "https://google.com/"
+        "desc": "Laravel 9 Documentation",
+        "url": "https://laravel.com/docs/9.x"
       }
     ]
   }
