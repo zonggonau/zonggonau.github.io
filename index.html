@@ -28,6 +28,31 @@
       h6 {
         font-family: "Roboto", sans-serif;
       }
+
+      .name-block {
+        background-color: #212121;
+        border-top-right-radius: 20px;
+      }
+      .name-block h2 {
+        color: #fff;
+        font-weight: 900;
+        font-size: 25px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      .image-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+      li {
+        list-style: square;
+        margin-top: 1%;
+      }
+      li :hover {
+        color: green;
+      }
     </style>
   </head>
   <body class="w3-light-grey">
@@ -44,7 +69,7 @@
                 style="width: 100%"
                 alt="Avatar"
               />
-              <div class="w3-display-bottomleft w3-container w3-text-white">
+              <div class="w3-display-bottomleft w3-container name-block">
                 <h2>ZONGGONAU CRISTOPER</h2>
               </div>
             </div>
@@ -350,7 +375,7 @@
               <br />
             </div>
           </div>
-
+          <div id="root"></div>
           <!-- End Right Column -->
         </div>
 
@@ -373,5 +398,110 @@
         <a href="https://sonowi.com" target="_blank">Sonowi</a>
       </p>
     </footer>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="./data.json"></script>
+    <script type="text/babel">
+      function Documentation({ url, desc, data }) {
+        return (
+          <div class="w3-containe w3-col m6 l6">
+            <h5 class="w3-opacity">
+              <img src={url} class="image-icon" />
+              &nbsp;
+              <b>{desc}</b>
+            </h5>
+            <ul>
+              {data.map((item, index) => (
+                <li key={index}>
+                  <a href={item.url} target="_blank">
+                    {item.desc}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      }
+
+      function App() {
+        fetch("./data.json")
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+          });
+
+        const iconDev = [
+          {
+            url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHcW-wcqFhHpxYJcGeCNmdqMJ6SoI4hKjNMkVaLL8c&s",
+            desc: "ReactJS",
+            data: [
+              {
+                desc: "Sistem Informasi Surat Menyurat (TTE) e-Surat",
+                url: "https://google.com/",
+              },
+              {
+                desc: "Sistem Informasi Surat Menyurat (TTE) e-Surat",
+                url: "https://tte.adisudj.ac.id/",
+              },
+              {
+                desc: "Sistem Informasi Surat Menyurat (TTE) e-Surat",
+                url: "https://tte.adisudj.ac.id/",
+              },
+            ],
+          },
+          {
+            url: "https://iconape.com/wp-content/files/bx/33981/svg/blackfire-inverted-1.svg",
+            desc: "Codeigniter",
+            data: [
+              {
+                desc: "Sistem Informasi Surat Menyurat (TTE) e-Surat",
+                url: "https://google.com/",
+              },
+              {
+                desc: "Sistem Informasi Surat Menyurat (TTE) e-Surat",
+                url: "https://tte.adisudj.ac.id/",
+              },
+            ],
+          },
+          {
+            url: "https://icons-for-free.com/download-icon-icon++html+icon-1320194800994962643_512.png",
+            desc: "HTML",
+            data: [
+              {
+                desc: "Sistem Informasi Surat Menyurat (TTE) e-Surat",
+                url: "https://google.com/",
+              },
+            ],
+          },
+        ];
+
+        return (
+          <div class="w3-container w3-card w3-white">
+            <h2 class="w3-text-grey w3-padding-16">
+              <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>
+              Documentation / Library
+            </h2>
+            <div class="w3-row">
+              {iconDev.map((item, index) => (
+                <Documentation
+                  url={item.url}
+                  desc={item.desc}
+                  data={item.data}
+                />
+              ))}
+            </div>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
   </body>
 </html>
