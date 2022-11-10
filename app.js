@@ -41,25 +41,25 @@ function setIconDekstop() {
       id: 1,
       name: "Github",
       icon: "svg/github.svg",
-      link: "https://github.com",
+      link: "https://github.com/zonggonau",
     },
     {
       id: 2,
       name: "Instagram",
       icon: "svg/instagram.svg",
-      link: "https://google.com",
+      link: "https://www.instagram.com/zongcris/",
     },
     {
       id: 3,
       name: "Linkedin",
       icon: "svg/linkedin.svg",
-      link: "https://facebook.com",
+      link: "https://www.linkedin.com/in/kristovedus-zonggonau-02607787/",
     },
     {
       id: 4,
       name: "Whatsup",
       icon: "svg/whatsapp.svg",
-      link: "https://whatsapp.com",
+      link: "https://api.whatsapp.com/send?phone=+6281355315427&text=Halo",
     },
   ];
   const iconDekstop = document.getElementById("social-media-dekstop");
