@@ -1,3 +1,81 @@
+function setIconMobile() {
+  let data = [
+    {
+      id: 1,
+      name: "Github",
+      icon: "svg/github.svg",
+      link: "https://github.com",
+    },
+    {
+      id: 2,
+      name: "Instagram",
+      icon: "svg/instagram.svg",
+      link: "https://google.com",
+    },
+    {
+      id: 3,
+      name: "Linkedin",
+      icon: "svg/linkedin.svg",
+      link: "https://facebook.com",
+    },
+    {
+      id: 4,
+      name: "Whatsup",
+      icon: "svg/whatsapp.svg",
+      link: "https://whatsapp.com",
+    },
+  ];
+  const iconMobile = document.getElementById("social-media-mobile");
+  data.map((item) => {
+    iconMobile.innerHTML += `
+    <div>
+    <a href="${item.link}" class="flex-none w-10 h-10">
+      <img src="${item.icon}" class="h-10 w-10">
+    </a>
+    </div>`;
+  });
+}
+function setIconDekstop() {
+  let data = [
+    {
+      id: 1,
+      name: "Github",
+      icon: "svg/github.svg",
+      link: "https://github.com",
+    },
+    {
+      id: 2,
+      name: "Instagram",
+      icon: "svg/instagram.svg",
+      link: "https://google.com",
+    },
+    {
+      id: 3,
+      name: "Linkedin",
+      icon: "svg/linkedin.svg",
+      link: "https://facebook.com",
+    },
+    {
+      id: 4,
+      name: "Whatsup",
+      icon: "svg/whatsapp.svg",
+      link: "https://whatsapp.com",
+    },
+  ];
+  const iconDekstop = document.getElementById("social-media-dekstop");
+  data.map((item) => {
+    iconDekstop.innerHTML += `
+      <div>
+      <a
+            href="${item.link}"
+            class="text-white px-3 py-2 rounded-md text-lg font-bold animate-pulse"
+          >
+            <img src="${item.icon}" class="h-8 w-8 text-white" />
+          </a>
+      </div>`;
+  });
+}
+
 function setSkill() {
   let data = [
     { id: 1, name: "JavaScript", icon: "icon/javascript.png" },
@@ -40,4 +118,6 @@ function setSkill() {
   });
 }
 
+setIconMobile();
+setIconDekstop();
 setSkill();
