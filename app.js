@@ -29,8 +29,8 @@ function setIconMobile() {
   data.map((item) => {
     iconMobile.innerHTML += `
     <div>
-    <a href="${item.link}" class="flex-none w-10 h-10" target="_blank">
-      <img src="${item.icon}" class="h-10 w-10">
+    <a href="${item.link}" class="flex-none" target="_blank">
+      <img src="${item.icon}" class="h-8 w-8">
     </a>
     </div>`;
   });
