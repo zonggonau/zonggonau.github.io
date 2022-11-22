@@ -145,17 +145,19 @@ if (
   (!("color-theme" in localStorage) &&
     window.matchMedia("(prefers-color-scheme: dark)").matches)
 ) {
-  themeToggleLightIcon.classList.remove("hidden");
-  themeToggleLightIconDekstop.classList.remove("hidden");
+  themeToggleLightIcon.classList.add("hidden");
+  // themeToggleDarkIconDekstop.classList.remove("hidden");
+  themeToggleDarkIconDekstop.classList.add("hidden");
 } else {
-  themeToggleDarkIcon.classList.remove("hidden");
-  themeToggleDarkIconDekstop.classList.remove("hidden");
+  themeToggleDarkIcon.classList.add("hidden");
+  themeToggleLightIconDekstop.classList.add("hidden");
 }
 
 var themeToggleBtn = document.getElementById("theme-toggle");
-var themeToggleBtnDekstop = document.getElementById("theme-toggle-dekstop");
+var themeToggleDekstop = document.getElementById("theme-toggle-dekstop");
 
 // Mobile button mode light or dark
+
 themeToggleBtn.addEventListener("click", function () {
   // toggle icons inside button
   themeToggleDarkIcon.classList.toggle("hidden");
@@ -183,11 +185,10 @@ themeToggleBtn.addEventListener("click", function () {
   }
 });
 
-// desktop button mode light or dark
-themeToggleBtnDekstop.addEventListener("click", function () {
+themeToggleDekstop.addEventListener("click", function () {
   // toggle icons inside button
-  themeToggleLightIconDekstop.classList.toggle("hidden");
   themeToggleDarkIconDekstop.classList.toggle("hidden");
+  themeToggleLightIconDekstop.classList.toggle("hidden");
 
   // if set via local storage previously
   if (localStorage.getItem("color-theme")) {
