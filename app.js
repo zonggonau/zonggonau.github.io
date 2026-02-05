@@ -1,180 +1,273 @@
-function setIconMobile() {
-  let data = [
+// ===================================
+// PORTFOLIO - DEVOPS ENGINEER
+// JavaScript Functionality
+// ===================================
+
+// ===================================
+// SOCIAL MEDIA LINKS
+// ===================================
+
+function setSocialLinks() {
+  const socialData = [
     {
       id: 1,
-      name: "Github",
+      name: "GitHub",
       icon: "svg/github.svg",
       link: "https://github.com/zonggonau",
     },
     {
       id: 2,
+      name: "LinkedIn",
+      icon: "svg/linkedin.svg",
+      link: "https://www.linkedin.com/in/kristovedus-zonggonau-02607787/",
+    },
+    {
+      id: 3,
       name: "Instagram",
       icon: "svg/instagram.svg",
       link: "https://www.instagram.com/zongcris/",
     },
     {
-      id: 3,
-      name: "Linkedin",
-      icon: "svg/linkedin.svg",
-      link: "https://www.linkedin.com/in/kristovedus-zonggonau-02607787/",
-    },
-    {
       id: 4,
-      name: "Whatsup",
+      name: "WhatsApp",
       icon: "svg/whatsapp.svg",
       link: "https://api.whatsapp.com/send?phone=+6281355315427&text=Halo",
     },
   ];
-  const iconMobile = document.getElementById("social-media-mobile");
-  data.map((item) => {
-    iconMobile.innerHTML += `
-    <div>
-    <a href="${item.link}" class="flex-none" target="_blank">
-      <img src="${item.icon}" class="h-8 w-8">
-    </a>
-    </div>`;
+
+  const socialContainer = document.getElementById("social-links");
+
+  socialData.forEach((social) => {
+    const link = document.createElement("a");
+    link.href = social.link;
+    link.className = "social-link";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.setAttribute("aria-label", social.name);
+
+    const img = document.createElement("img");
+    img.src = social.icon;
+    img.alt = social.name;
+
+    link.appendChild(img);
+    socialContainer.appendChild(link);
   });
 }
-function setIconDekstop() {
-  let data = [
+
+// ===================================
+// SKILLS DATA & RENDERING
+// ===================================
+
+function setSkills() {
+  const skillsData = [
     {
-      id: 1,
-      name: "Github",
-      icon: "svg/github.svg",
-      link: "https://github.com/zonggonau",
+      category: "DevOps & CI/CD",
+      icon: "🚀",
+      skills: [
+        { name: "Docker", icon: "icon/docker.png" },
+        { name: "Kubernetes", icon: "icon/docker.png" },
+        { name: "GitHub Actions", icon: "icon/github.png" },
+        { name: "Jenkins", icon: "icon/git.png" },
+        { name: "GitLab CI", icon: "icon/git.png" },
+        { name: "Git", icon: "icon/git.png" },
+        { name: "CircleCI", icon: "icon/git.png" },
+      ],
     },
     {
-      id: 2,
-      name: "Instagram",
-      icon: "svg/instagram.svg",
-      link: "https://www.instagram.com/zongcris/",
+      category: "Cloud Platforms",
+      icon: "☁️",
+      skills: [
+        { name: "AWS", icon: "icon/amazon-aws.png" },
+        { name: "Digital Ocean", icon: "icon/digital-ocean.png" },
+        { name: "Firebase", icon: "icon/firebase.png" },
+        { name: "Heroku", icon: "icon/digital-ocean.png" },
+        { name: "Vercel", icon: "icon/digital-ocean.png" },
+      ],
     },
     {
-      id: 3,
-      name: "Linkedin",
-      icon: "svg/linkedin.svg",
-      link: "https://www.linkedin.com/in/kristovedus-zonggonau-02607787/",
+      category: "Infrastructure & Automation",
+      icon: "⚙️",
+      skills: [
+        { name: "Linux Server", icon: "icon/ubuntu.png" },
+        { name: "Terraform", icon: "icon/ubuntu.png" },
+        { name: "Ansible", icon: "icon/ubuntu.png" },
+        { name: "Nginx", icon: "icon/ubuntu.png" },
+        { name: "Apache", icon: "icon/ubuntu.png" },
+        { name: "Shell Script", icon: "icon/ubuntu.png" },
+      ],
     },
     {
-      id: 4,
-      name: "Whatsup",
-      icon: "svg/whatsapp.svg",
-      link: "https://api.whatsapp.com/send?phone=+6281355315427&text=Halo",
+      category: "Monitoring & Logging",
+      icon: "📊",
+      skills: [
+        { name: "Prometheus", icon: "icon/ubuntu.png" },
+        { name: "Grafana", icon: "icon/ubuntu.png" },
+        { name: "ELK Stack", icon: "icon/ubuntu.png" },
+        { name: "Datadog", icon: "icon/ubuntu.png" },
+        { name: "New Relic", icon: "icon/ubuntu.png" },
+      ],
+    },
+    {
+      category: "Databases",
+      icon: "🗄️",
+      skills: [
+        { name: "PostgreSQL", icon: "icon/postgresql.png" },
+        { name: "MySQL", icon: "icon/mysql.png" },
+        { name: "MongoDB", icon: "icon/mongodb.png" },
+        { name: "Firebase", icon: "icon/firebase.png" },
+        { name: "Redis", icon: "icon/mongodb.png" },
+        { name: "SQLite", icon: "icon/mysql.png" },
+      ],
+    },
+    {
+      category: "Programming & Scripting",
+      icon: "💻",
+      skills: [
+        { name: "JavaScript", icon: "icon/javascript.png" },
+        { name: "TypeScript", icon: "icon/javascript.png" },
+        { name: "Python", icon: "icon/python.png" },
+        { name: "PHP", icon: "icon/php.png" },
+        { name: "Node.js", icon: "icon/node-js.png" },
+        { name: "Bash", icon: "icon/ubuntu.png" },
+        { name: "Go", icon: "icon/ubuntu.png" },
+      ],
+    },
+    {
+      category: "Web Development",
+      icon: "🌐",
+      skills: [
+        { name: "React", icon: "icon/react.png" },
+        { name: "Next.js", icon: "icon/react.png" },
+        { name: "Vue.js", icon: "icon/react.png" },
+        { name: "HTML", icon: "icon/html.png" },
+        { name: "CSS", icon: "icon/css3.png" },
+        { name: "Laravel", icon: "icon/laravel.png" },
+        { name: "CodeIgniter", icon: "icon/codeigniter.png" },
+        { name: "Express.js", icon: "icon/node-js.png" },
+        { name: "Bootstrap", icon: "icon/bootstrap.png" },
+        { name: "Tailwind CSS", icon: "icon/tailwind-css.png" },
+        { name: "WordPress", icon: "icon/wordpress.png" },
+        { name: "Strapi", icon: "icon/node-js.png" },
+      ],
+    },
+    {
+      category: "Mobile Development",
+      icon: "📱",
+      skills: [
+        { name: "React Native", icon: "icon/react.png" },
+        { name: "Flutter", icon: "icon/flutter.png" },
+        { name: "Expo", icon: "icon/react.png" },
+      ],
+    },
+    {
+      category: "Testing & Quality",
+      icon: "🧪",
+      skills: [
+        { name: "Jest", icon: "icon/javascript.png" },
+        { name: "Pytest", icon: "icon/python.png" },
+        { name: "PHPUnit", icon: "icon/php.png" },
+        { name: "Selenium", icon: "icon/python.png" },
+        { name: "Postman", icon: "icon/node-js.png" },
+      ],
+    },
+    {
+      category: "Message Queue & Cache",
+      icon: "📮",
+      skills: [
+        { name: "RabbitMQ", icon: "icon/ubuntu.png" },
+        { name: "Redis", icon: "icon/mongodb.png" },
+        { name: "Kafka", icon: "icon/ubuntu.png" },
+        { name: "Memcached", icon: "icon/ubuntu.png" },
+      ],
+    },
+    {
+      category: "AI & Productivity",
+      icon: "🤖",
+      skills: [
+        { name: "AI Prompting", icon: "icon/python.png" },
+        { name: "ChatGPT", icon: "icon/python.png" },
+        { name: "Claude AI", icon: "icon/python.png" },
+        { name: "GitHub Copilot", icon: "icon/github.png" },
+        { name: "Cursor IDE", icon: "icon/python.png" },
+        { name: "Trello", icon: "icon/trello.png" },
+        { name: "Jira", icon: "icon/trello.png" },
+        { name: "Notion", icon: "icon/trello.png" },
+      ],
     },
   ];
-  const iconDekstop = document.getElementById("social-media-dekstop");
-  data.map((item) => {
-    iconDekstop.innerHTML += `
-      <div>
-      <a
-            href="${item.link}"
-            class="text-white px-3 py-2 rounded-md text-lg font-bold animate-pulse"
-            target="_blank"
-          >
-            <img src="${item.icon}" class="h-8 w-8 text-white" />
-          </a>
-      </div>`;
+
+  const skillsContainer = document.getElementById("skills-container");
+
+  skillsData.forEach((category) => {
+    // Create category container
+    const categoryDiv = document.createElement("div");
+    categoryDiv.className = "skill-category";
+
+    // Create category title
+    const categoryTitle = document.createElement("h3");
+    categoryTitle.className = "skill-category-title";
+    categoryTitle.innerHTML = `<span class="skill-category-icon">${category.icon}</span> ${category.category}`;
+    categoryDiv.appendChild(categoryTitle);
+
+    // Create skills grid
+    const skillsGrid = document.createElement("div");
+    skillsGrid.className = "skills-grid";
+
+    category.skills.forEach((skill) => {
+      const skillItem = document.createElement("div");
+      skillItem.className = "skill-item";
+
+      const skillIcon = document.createElement("img");
+      skillIcon.src = skill.icon;
+      skillIcon.alt = skill.name;
+      skillIcon.className = "skill-icon";
+
+      const skillName = document.createElement("div");
+      skillName.className = "skill-name";
+      skillName.textContent = skill.name;
+
+      skillItem.appendChild(skillIcon);
+      skillItem.appendChild(skillName);
+      skillsGrid.appendChild(skillItem);
+    });
+
+    categoryDiv.appendChild(skillsGrid);
+    skillsContainer.appendChild(categoryDiv);
   });
 }
 
-function setSkill() {
-  let data = [
-    { id: 1, name: "JavaScript", icon: "icon/javascript.png" },
-    { id: 2, name: "HTML", icon: "icon/html.png" },
-    { id: 3, name: "CSS", icon: "icon/css3.png" },
-    { id: 4, name: "React", icon: "icon/react.png" },
-    { id: 5, name: "Node", icon: "icon/node-js.png" },
-    { id: 7, name: "MongoDB", icon: "icon/mongodb.png" },
-    { id: 8, name: "MySQL", icon: "icon/mysql.png" },
-    { id: 9, name: "Git", icon: "icon/git.png" },
-    { id: 10, name: "GitHub", icon: "icon/github.png" },
-    { id: 11, name: "Bootstrap", icon: "icon/bootstrap.png" },
-    { id: 12, name: "Tailwindcss", icon: "icon/tailwind-css.png" },
-    { id: 13, name: "Laravel", icon: "icon/laravel.png" },
-    { id: 14, name: "PHP", icon: "icon/php.png" },
-    { id: 15, name: "Python", icon: "icon/python.png" },
-    { id: 16, name: "Codeigniter", icon: "icon/codeigniter.png" },
-    { id: 17, name: "React Native", icon: "icon/react.png" },
-    { id: 18, name: "Flutter", icon: "icon/flutter.png" },
-    { id: 19, name: "Trello", icon: "icon/trello.png" },
-    { id: 20, name: "Linux Server", icon: "icon/ubuntu.png" },
-    { id: 21, name: "Firebase", icon: "icon/firebase.png" },
-    { id: 22, name: "Wordpress", icon: "icon/wordpress.png" },
-    { id: 23, name: "Postgresql", icon: "icon/postgresql.png" },
-    { id: 24, name: "Docker", icon: "icon/docker.png" },
-    { id: 25, name: "AWS", icon: "icon/amazon-aws.png" },
-  ];
-  const skill = document.getElementById("skill");
-  data.map((item) => {
-    skill.innerHTML += `
-    <div class="flex flex-col space-x-2 items-center pb-10">
-    <div class="flex-none w-10 h-10">
-      <img src="${item.icon}" class="h-10 w-10" alt="${item.name}" />
-    </div>
-    <div class="flex-auto p-3">
-      <h1 class="text-sm font-bold">${item.name}</h1>
-    </div>
-  </div>
-     `;
-  });
-}
+// ===================================
+// THEME TOGGLE
+// ===================================
 
-// On page load or when changing themes, best to add inline in `head` to avoid FOUC
-if (
-  localStorage.getItem("color-theme") === "dark" ||
-  (!("color-theme" in localStorage) &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches)
-) {
-  document.documentElement.classList.add("dark");
-} else {
-  document.documentElement.classList.remove("dark");
-}
+function initTheme() {
+  const themeToggleBtn = document.getElementById("theme-toggle");
+  const themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
+  const themeToggleLightIcon = document.getElementById(
+    "theme-toggle-light-icon",
+  );
 
-var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
-var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
-var themeToggleDarkIconDekstop = document.getElementById(
-  "theme-toggle-dark-icon-dekstop"
-);
-var themeToggleLightIconDekstop = document.getElementById(
-  "theme-toggle-light-icon-dekstop"
-);
+  // Check for saved theme preference or default to light mode
+  const currentTheme = localStorage.getItem("color-theme");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-// Change the icons inside the button based on previous settings
-if (
-  localStorage.getItem("color-theme") === "dark" ||
-  (!("color-theme" in localStorage) &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches)
-) {
-  themeToggleLightIcon.classList.add("hidden");
-  // themeToggleDarkIconDekstop.classList.remove("hidden");
-  themeToggleDarkIconDekstop.classList.add("hidden");
-} else {
-  themeToggleDarkIcon.classList.add("hidden");
-  themeToggleLightIconDekstop.classList.add("hidden");
-}
-
-var themeToggleBtn = document.getElementById("theme-toggle");
-var themeToggleDekstop = document.getElementById("theme-toggle-dekstop");
-
-// Mobile button mode light or dark
-
-themeToggleBtn.addEventListener("click", function () {
-  // toggle icons inside button
-  themeToggleDarkIcon.classList.toggle("hidden");
-  themeToggleLightIcon.classList.toggle("hidden");
-
-  // if set via local storage previously
-  if (localStorage.getItem("color-theme")) {
-    if (localStorage.getItem("color-theme") === "light") {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("color-theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("color-theme", "light");
-    }
-
-    // if NOT set via local storage previously
+  if (currentTheme === "dark" || (!currentTheme && prefersDark)) {
+    document.documentElement.classList.add("dark");
+    themeToggleLightIcon.classList.remove("hidden");
+    themeToggleDarkIcon.classList.add("hidden");
   } else {
+    document.documentElement.classList.remove("dark");
+    themeToggleDarkIcon.classList.remove("hidden");
+    themeToggleLightIcon.classList.add("hidden");
+  }
+
+  // Toggle theme on button click
+  themeToggleBtn.addEventListener("click", function () {
+    // Toggle icons
+    themeToggleDarkIcon.classList.toggle("hidden");
+    themeToggleLightIcon.classList.toggle("hidden");
+
+    // Toggle dark mode
     if (document.documentElement.classList.contains("dark")) {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("color-theme", "light");
@@ -182,56 +275,142 @@ themeToggleBtn.addEventListener("click", function () {
       document.documentElement.classList.add("dark");
       localStorage.setItem("color-theme", "dark");
     }
-  }
-});
+  });
+}
 
-themeToggleDekstop.addEventListener("click", function () {
-  // toggle icons inside button
-  themeToggleDarkIconDekstop.classList.toggle("hidden");
-  themeToggleLightIconDekstop.classList.toggle("hidden");
+// ===================================
+// DYNAMIC GREETING
+// ===================================
 
-  // if set via local storage previously
-  if (localStorage.getItem("color-theme")) {
-    if (localStorage.getItem("color-theme") === "light") {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("color-theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("color-theme", "light");
-    }
+function setGreeting() {
+  const greetingElement = document.getElementById("greeting");
+  const hour = new Date().getHours();
 
-    // if NOT set via local storage previously
+  let greeting = "Hi, Good Day";
+
+  if (hour >= 4 && hour < 12) {
+    greeting = "Hi, Good Morning ☀️";
+  } else if (hour >= 12 && hour < 17) {
+    greeting = "Hi, Good Afternoon 🌤️";
+  } else if (hour >= 17 && hour < 21) {
+    greeting = "Hi, Good Evening 🌆";
   } else {
-    if (document.documentElement.classList.contains("dark")) {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("color-theme", "light");
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("color-theme", "dark");
-    }
+    greeting = "Hi, Good Night 🌙";
   }
+
+  greetingElement.textContent = greeting;
+}
+
+// ===================================
+// SMOOTH SCROLL FOR NAVIGATION
+// ===================================
+
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    });
+  });
+}
+
+// ===================================
+// NAVBAR SCROLL EFFECT
+// ===================================
+
+function initNavbarScroll() {
+  const navbar = document.getElementById("navbar");
+  let lastScroll = 0;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll <= 0) {
+      navbar.style.boxShadow = "none";
+    } else {
+      navbar.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.1)";
+    }
+
+    lastScroll = currentScroll;
+  });
+}
+
+// ===================================
+// SCROLL REVEAL ANIMATION
+// ===================================
+
+function initScrollReveal() {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -100px 0px",
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  }, observerOptions);
+
+  // Observe all sections
+  document.querySelectorAll(".section").forEach((section) => {
+    section.style.opacity = "0";
+    section.style.transform = "translateY(30px)";
+    section.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
+    observer.observe(section);
+  });
+
+  // Observe skill categories
+  document.querySelectorAll(".skill-category").forEach((category, index) => {
+    category.style.opacity = "0";
+    category.style.transform = "translateY(30px)";
+    category.style.transition = `opacity 0.6s ease-out ${index * 0.1}s, transform 0.6s ease-out ${index * 0.1}s`;
+    observer.observe(category);
+  });
+}
+
+// ===================================
+// INITIALIZE ALL FUNCTIONS
+// ===================================
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Set initial content
+  setSocialLinks();
+  setSkills();
+  setGreeting();
+
+  // Initialize features
+  initTheme();
+  initSmoothScroll();
+  initNavbarScroll();
+
+  // Add slight delay for scroll reveal to ensure DOM is ready
+  setTimeout(() => {
+    initScrollReveal();
+  }, 100);
 });
 
-const date = new Date();
-const hour = date.getHours();
-const minute = date.getMinutes();
-const second = date.getSeconds();
-if (hour >= 4 && hour <= 10) {
-  document.getElementById("timezone").innerHTML = "Hi, Good Morning";
-}
-if (hour >= 10 && hour <= 15) {
-  document.getElementById("timezone").innerHTML = "Hi, Good Afternoon";
-}
-if (hour >= 15 && hour <= 18) {
-  document.getElementById("timezone").innerHTML = "Hi, Good Evening";
-}
-if (hour >= 18 && hour <= 24) {
-  document.getElementById("timezone").innerHTML = "Hi, Good Night";
-}
-if (hour >= 0 && hour <= 4) {
-  document.getElementById("timezone").innerHTML = "Hi, Good Night";
-}
+// ===================================
+// PERFORMANCE OPTIMIZATION
+// ===================================
 
-setIconMobile();
-setIconDekstop();
-setSkill();
+// Debounce function for scroll events
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}

@@ -4,250 +4,246 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"
-    />
-    <title>Developer Profile</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Zonggonau Cristoper - DevOps Engineer specializing in CI/CD, Kubernetes, Infrastructure as Code, and Cloud Infrastructure. Building robust pipelines and automating infrastructure." />
+    <meta name="keywords" content="DevOps Engineer, Kubernetes, Docker, Terraform, CI/CD, AWS, Cloud Infrastructure, Ansible, GitHub Actions" />
+    <meta name="author" content="Zonggonau Cristoper" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Zonggonau Cristoper - DevOps Engineer" />
+    <meta property="og:description" content="DevOps Engineer specializing in CI/CD, Kubernetes, and Cloud Infrastructure" />
+    <meta property="og:type" content="website" />
+    
+    <title>Zonggonau Cristoper - DevOps Engineer | Cloud Infrastructure Specialist</title>
+    
+    <!-- Custom Styles - Professional Dark Theme -->
+    <!-- <link rel="stylesheet" href="styles-dark.css" /> -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- create navbar profile hire -->
-    <nav class="bg-white dark:bg-gray-900 fixed top-0 left-0 right-0">
-      <div class="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div class="relative flex items-center justify-between h-24 space-x-5">
-          <div class="inset-y-0 left-0 flex items-center block lg:hidden">
-            <!-- Mobile menu button-->
-            <button
-              id="theme-toggle"
-              type="button"
-              class="text-gray-500 dark:text-gray-400 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
-            >
-              <svg
-                id="theme-toggle-dark-icon"
-                class="w-8 h-8 animate-pulse text-gray-900"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-                ></path>
-              </svg>
-              <svg
-                id="theme-toggle-light-icon"
-                class="w-8 h-8 animate-pulse text-yellow-500"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </button>
-          </div>
-          <div
-            class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
-          >
-            <div class="flex-shrink-0 flex items-center">
-              <div
-                class="lg:block dark:text-white text-3xl font-bold"
-                id="timezone"
-              ></div>
-            </div>
-          </div>
-          <div class="hidden lg:block">
-            <div class="flex items-center space-x-8">
-              <div>
-                <a
-                  href="#"
-                  class="text-white px-3 py-2 rounded-md text-lg font-bold bg-pink-600"
-                  >RESUME</a
-                >
-                <a
-                  href="mailto:cristoperzonggonau@gmail.com"
-                  class="text-white px-3 py-2 rounded-md text-lg font-bold bg-pink-600"
-                  >HIRE ME</a
-                >
-              </div>
-              <!-- Dekstop menu button-->
-              <button
-                id="theme-toggle-dekstop"
-                type="button"
-                class="text-gray-500 dark:text-gray-400 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
-              >
-                <svg
-                  id="theme-toggle-dark-icon-dekstop"
-                  class="h-8 animate-pulse text-gray-900"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-                  ></path>
-                </svg>
-                <svg
-                  id="theme-toggle-light-icon-dekstop"
-                  class="h-8 animate-pulse text-yellow-500"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-          </div>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-container">
+        <div class="navbar-brand">ZC</div>
+        <div class="navbar-menu">
+          <a href="#home" class="navbar-link">Home</a>
+          <a href="#skills" class="navbar-link">Skills</a>
+          <a href="#experience" class="navbar-link">Experience</a>
+          <a href="#portfolio" class="navbar-link">Portfolio</a>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <svg id="theme-toggle-dark-icon" class="hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
         </div>
       </div>
     </nav>
-    <!-- end navbar -->
-    <!-- start profile here -->
 
-    <div class="bg-white dark:bg-gray-900 pt-36">
-      <div id="particles-js"></div>
-      <!-- get responsive image  -->
-      <div class="flex flex-col items-center justify-center">
-        <div class="mx-auto sm:px-16">
-          <img
-            src="images/profile2.jpg"
-            class="block lg:hidden h-32 rounded-full border-4 border-pink-900 shadow-2xl dark:shadow-gray-800"
-          />
-          <img
-            src="images/profile2.jpg"
-            class="hidden lg:block h-64 rounded-full border-4 border-pink-900 shadow-2xl dark:shadow-gray-800"
-          />
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="hero-left">
+          <img src="images/profile2.jpg" alt="Zonggonau Cristoper" class="hero-image" />
         </div>
-        <div class="pt-5">
-          <h1 class="text-2xl font-bold dark:text-white">
-            I'm Zonggonau Cristoper
-          </h1>
-        </div>
-        <div class="p-3">
-          <span class="text-gray-500 dark:text-gray-300 font-bold"
-            >Fullstack Developer</span
-          >
-        </div>
-        <!-- get icon github, linked, twitter -->
-        <!-- Mobile phone -->
-        <div
-          class="block lg:hidden flex space-x-10 items-center pt-5"
-          id="social-media-mobile"
-        ></div>
-        <!-- dekstop -->
-        <div
-          class="hidden lg:block items-center pb-5 left-5 fixed top-64"
-          id="social-media-dekstop"
-        ></div>
-        <div class="max-w-4xl p-5 border-b dark:border-gray-700">
-          <p class="dark:text-white text-center text-xl font-medium">
-            A Frontend focused Web Developer building the Frontend of Websites
-            and Web Applications that leads to the success of the overall
-            product
+        <div class="hero-right">
+          <p class="hero-greeting" id="greeting">Hi, Good Day</p>
+          <h1 class="hero-title">I'm Zonggonau Cristoper</h1>
+          <h2 class="hero-subtitle">DevOps Engineer | Cloud Infrastructure Specialist</h2>
+          <p class="hero-description">
+            With over 14 years of experience in software development and DevOps engineering, I specialize in building robust CI/CD pipelines, automating infrastructure with IaC, and creating scalable full-stack applications. Passionate about cloud technologies, container orchestration, and bridging the gap between development and operations.
           </p>
-        </div>
-        <!-- end icon -->
-        <div class="pt-5 block lg:hidden">
-          <a
-            href="#"
-            class="text-white px-3 py-2 rounded-md text-lg font-bold bg-pink-600"
-            >RESUME</a
-          >
-          <a
-            href="mailto:cristoperzonggonau@gmail.com"
-            class="text-white px-3 py-2 rounded-md text-lg font-bold bg-pink-600"
-            >HIRE ME</a
-          >
-        </div>
-
-        <div class="max-w-6xl p-10 dark:text-white">
-          <h1 class="text-xl font-bold text-center">SKILLS</h1>
-          <div
-            class="pt-10 flex flex-wrap justify-center space-x-5"
-            id="skill"
-          ></div>
-          <div class="p-10 max-w-6xl dark:text-white text-center">
-            <h1 class="text-xl font-bold pb-5">EXPERIENCE</h1>
-            <p class="text-lg font-bold">PT. Master Sistem Infotama</p>
-            <p class="text-sm font-bold text-gray-800 dark:text-gray-200">
-              Fullstack Developer
-            </p>
-            <p class="text-sm font-bold">2018 - Present</p>
-            <br />
-            <p class="text-lg font-bold">Responsibilities</p>
-            <ul class="list-disc">
-              <li>
-                Work with development teams and product managers to ideate
-                software solutions
-              </li>
-              <li>Design client-side and server-side architecture</li>
-              <li>
-                Build the front-end of applications through appealing visual
-                design
-              </li>
-              <li>
-                Develop and manage well-functioning databases and applications
-              </li>
-              <li>Write effective APIs</li>
-              <li>Test software to ensure responsiveness and efficiency</li>
-              <li>Troubleshoot, debug and upgrade software</li>
-              <li>Create security and data protection settings</li>
-              <li>
-                Build features and applications with a mobile responsive design
-              </li>
-              <li>Write technical documentation</li>
-              <li>
-                Work with data scientists and analysts to improve software
-              </li>
-            </ul>
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path>
+              </svg>
+              Download Resume
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=6281355315427&text=Hi%20Zonggonau,%20I%20would%20like%20to%20discuss%20a%20project" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+              WhatsApp
+            </a>
           </div>
-          <div class="max-w-6xl dark:text-white text-center">
-            <h1 class="text-xl font-bold pb-10">PORTFOLIO</h1>
-            <div class="dark:text-white text-center flex flex-row flex-wrap">
-              <div
-                class="basis-1/2 p-3 transition hover:scale-125 duration-700"
-              >
-                <img src="./protfolio/portfolio1.png" class="w-full h-full" />
-              </div>
-              <div
-                class="basis-1/2 p-3 transition hover:scale-125 duration-700"
-              >
-                <img src="./protfolio/portfolio3.png" class="w-full h-full" />
-              </div>
-              <div class="p-3 transition hover:scale-125 duration-700">
-                <img src="./protfolio/portfolio4.png" class="w-full h-full" />
-              </div>
-              <div
-                class="basis-1/2 p-3 transition hover:scale-125 duration-700"
-              >
-                <img src="./protfolio/portfolio5.png" class="w-full h-full" />
-              </div>
-              <div
-                class="basis-1/2 p-3 transition hover:scale-125 duration-700"
-              >
-                <img src="./protfolio/portfolio6.png" class="w-full h-full" />
-              </div>
+          <div class="social-links" id="social-links">
+            <!-- Social links will be injected by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+      <h2 class="section-title">Skills & Technologies</h2>
+      <p class="section-subtitle">
+        A comprehensive toolkit for modern DevOps practices, cloud infrastructure, and full-stack development
+      </p>
+      <div class="skills-container" id="skills-container">
+        <!-- Skills will be injected by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+      <h2 class="section-title">Professional Experience</h2>
+      <p class="section-subtitle">
+        Over a decade of experience in software development, infrastructure automation, and DevOps practices
+      </p>
+      
+      <!-- DevOps Engineer -->
+      <div class="experience-card">
+        <div class="experience-header">
+          <h3 class="experience-company">PT. Master Sistem Infotama</h3>
+          <p class="experience-role">DevOps Engineer</p>
+          <p class="experience-period">2018 - 2024</p>
+        </div>
+        
+        <div class="experience-responsibilities">
+          <h3>Key Responsibilities</h3>
+          <ul class="responsibilities-list">
+            <li>Design and implement CI/CD pipelines using Jenkins, GitHub Actions, and GitLab CI to automate build, test, and deployment processes across multiple projects</li>
+            <li>Manage Infrastructure as Code (IaC) using Terraform and Ansible for consistent, version-controlled, and reproducible infrastructure deployments</li>
+            <li>Orchestrate containerized applications with Docker and Kubernetes, implementing auto-scaling, load balancing, and high availability strategies</li>
+            <li>Administer and optimize cloud infrastructure across AWS, GCP, and Digital Ocean platforms, reducing costs by 30% through resource optimization</li>
+            <li>Implement comprehensive monitoring and logging solutions using Prometheus, Grafana, and ELK Stack for proactive issue detection and resolution</li>
+            <li>Develop automation scripts in Bash and Python to streamline operational workflows, reducing manual deployment time by 70%</li>
+            <li>Manage and optimize databases including PostgreSQL, MySQL, MongoDB, and Firebase with backup strategies and performance tuning</li>
+            <li>Implement security best practices, compliance measures (SSL/TLS, secrets management), and disaster recovery procedures</li>
+            <li>Collaborate with development teams to optimize application performance, implement caching strategies, and ensure scalability</li>
+            <li>Create and maintain comprehensive technical documentation for infrastructure architecture, deployment processes, and operational runbooks</li>
+            <li>Leverage AI-assisted development tools (ChatGPT, GitHub Copilot) and advanced prompt engineering to enhance productivity and code quality</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Fullstack Developer -->
+      <div class="experience-card">
+        <div class="experience-header">
+          <h3 class="experience-company">PT. Master Sistem Infotama</h3>
+          <p class="experience-role">Fullstack Developer</p>
+          <p class="experience-period">2012 - 2018</p>
+        </div>
+        
+        <div class="experience-responsibilities">
+          <h3>Key Responsibilities</h3>
+          <ul class="responsibilities-list">
+            <li>Developed and maintained full-stack web applications using PHP (Laravel, CodeIgniter), JavaScript, HTML5, and CSS3</li>
+            <li>Built responsive and interactive user interfaces using React.js, Bootstrap, and modern CSS frameworks</li>
+            <li>Designed and implemented RESTful APIs for seamless frontend-backend communication and third-party integrations</li>
+            <li>Developed mobile applications using React Native and Flutter for iOS and Android platforms</li>
+            <li>Managed database design, optimization, and administration for MySQL, PostgreSQL, and MongoDB</li>
+            <li>Implemented user authentication, authorization, and security features following OWASP best practices</li>
+            <li>Collaborated with UI/UX designers to translate wireframes and mockups into functional, pixel-perfect interfaces</li>
+            <li>Integrated payment gateways, third-party APIs, and external services into web applications</li>
+            <li>Performed code reviews, debugging, and optimization to ensure code quality and application performance</li>
+            <li>Utilized version control (Git/GitHub) for collaborative development and maintained clean commit histories</li>
+            <li>Participated in agile development processes including sprint planning, daily standups, and retrospectives</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Freelance Developer -->
+      <div class="experience-card">
+        <div class="experience-header">
+          <h3 class="experience-company">Freelance</h3>
+          <p class="experience-role">Freelance Developer</p>
+          <p class="experience-period">2012 - Present</p>
+        </div>
+        
+        <div class="experience-responsibilities">
+          <h3>Key Responsibilities</h3>
+          <ul class="responsibilities-list">
+            <li>Delivered custom web and mobile applications for clients across various industries including e-commerce, education, and government sectors</li>
+            <li>Provided end-to-end development services from requirement gathering, design, development, testing, to deployment and maintenance</li>
+            <li>Built WordPress websites with custom themes and plugins tailored to client specifications and branding requirements</li>
+            <li>Developed e-commerce solutions with payment gateway integration, inventory management, and order processing systems</li>
+            <li>Created content management systems (CMS) for clients to easily manage their website content without technical knowledge</li>
+            <li>Implemented SEO best practices, performance optimization, and responsive design for improved user experience and search rankings</li>
+            <li>Managed cloud hosting and server administration on AWS, Digital Ocean, and shared hosting platforms</li>
+            <li>Provided technical consulting and training to clients on web technologies, best practices, and digital transformation strategies</li>
+            <li>Maintained long-term client relationships through excellent communication, timely delivery, and post-launch support</li>
+            <li>Stayed current with emerging technologies and industry trends to offer innovative solutions to clients</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section" id="portfolio">
+      <h2 class="section-title">Portfolio</h2>
+      <p class="section-subtitle">
+        Showcasing projects and implementations across various technologies
+      </p>
+      
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="./protfolio/portfolio1.png" alt="Portfolio Project 1" class="portfolio-image" />
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h3>Project 1</h3>
+            </div>
+          </div>
+        </div>
+        
+        <div class="portfolio-item">
+          <img src="./protfolio/portfolio3.png" alt="Portfolio Project 2" class="portfolio-image" />
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h3>Project 2</h3>
+            </div>
+          </div>
+        </div>
+        
+        <div class="portfolio-item">
+          <img src="./protfolio/portfolio4.png" alt="Portfolio Project 3" class="portfolio-image" />
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h3>Project 3</h3>
+            </div>
+          </div>
+        </div>
+        
+        <div class="portfolio-item">
+          <img src="./protfolio/portfolio5.png" alt="Portfolio Project 4" class="portfolio-image" />
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h3>Project 4</h3>
+            </div>
+          </div>
+        </div>
+        
+        <div class="portfolio-item">
+          <img src="./protfolio/portfolio6.png" alt="Portfolio Project 5" class="portfolio-image" />
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h3>Project 5</h3>
+            </div>
+          </div>
+        </div>
+        
+        <div class="portfolio-item">
+          <img src="./protfolio/protfolio7.png" alt="Portfolio Project 6" class="portfolio-image" />
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h3>Project 6</h3>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="p-8 dark:bg-gray-800">
-      <div>
-        <p class="dark:text-white text-center uppercase font-bold">
-          @ZONGCRIST
-        </p>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="footer-text">© 2026 ZONGGONAU CRISTOPER - DevOps Engineer</p>
       </div>
-    </div>
+    </footer>
 
     <script src="app.js"></script>
   </body>
